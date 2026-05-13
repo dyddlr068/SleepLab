@@ -443,10 +443,10 @@ if (records.size() < MIN_RECORDS) {
 <img width="483" height="560" alt="수면통계요약" src="https://github.com/user-attachments/assets/9ac4a50c-0bca-4aac-9abf-cf5d6b685133" />
 
 **슬라이더 조절**
-<img width="483" height="560" alt="수면통계요약슬라이더" src="https://github.com/user-attachments/assets/99c81b93-9335-49af-8176-b4f845353599" />
+<img width="484" height="561" alt="수면통계요약슬라이더" src="https://github.com/user-attachments/assets/b2e9c150-8880-43bf-b99e-792d82b0fec1" />
 
 **예외 처리 — 품질 경고**
-<img width="483" height="560" alt="수면통계요약예외처리" src="https://github.com/user-attachments/assets/00504f1a-5c25-4285-8f45-8a881d084c28" />
+<img width="485" height="559" alt="수면통계요약예외처리" src="https://github.com/user-attachments/assets/e3389e0c-0a68-4d57-a013-d8b701752f59" />
 
 </details>
 
