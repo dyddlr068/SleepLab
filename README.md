@@ -465,7 +465,7 @@ if (records.size() < MIN_RECORDS) {
 <details>
 <summary>📸 스크린샷</summary>
 
-> 스크린샷 첨부 예정
+<img width="484" height="561" alt="월별캘린더" src="https://github.com/user-attachments/assets/18fc489b-b494-456a-89bb-fbf7af75f535" />
 
 </details>
 
