@@ -294,7 +294,7 @@ if (records.size() < MIN_RECORDS) {
 
 ## 📊 14. UML 클래스 다이어그램
 
-![클래스다이어그램](https://github.com/dyddlr068/SleepLab/blob/main/SleepLab_Diagram.png?raw=true)
+![클래스다이어그램](https://github.com/dyddlr068/SleepLab/blob/main/SleepLab%20Diagram.png?raw=true)
 
 ---
 
