@@ -507,7 +507,7 @@ if (records.size() < MIN_RECORDS) {
 **저장 완료**
 <img width="484" height="561" alt="수면기록입력완료" src="https://github.com/user-attachments/assets/3986c134-8621-48ce-9a41-57b21cd043b1" />
 
-**예외 처리 — 잘못된 날짜 입력**
+**예외 처리 — 잘못된 시간 입력**
 <img width="484" height="561" alt="수면기록입력예외처리" src="https://github.com/user-attachments/assets/17bfe50c-bf91-42ef-9888-a74a7d9f0637" />
 
 </details>
