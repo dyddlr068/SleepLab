@@ -223,7 +223,7 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 ## 🛠️ 12. SleepLab 트러블슈팅 전체 기록
 
 <details>
-<summary>1. 파일명 불일치로 데이터 복구 불가 문제</summary>
+<summary>:small_blue_diamond:1. 파일명 불일치로 데이터 복구 불가 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
