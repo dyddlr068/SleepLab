@@ -458,9 +458,11 @@ if (records.size() < MIN_RECORDS) {
 <summary>📸 스크린샷</summary>
 
 **로그인 화면**
+
 <img width="483" height="560" alt="로그인메인" src="https://github.com/user-attachments/assets/654028f7-a314-4046-9459-7b7b85cdf2db" />
 
 **회원가입 화면**
+
 <img width="483" height="560" alt="회원가입" src="https://github.com/user-attachments/assets/a6648aff-311d-45a8-8925-15ba2f3fe5d9" />
 
 </details>
@@ -530,9 +532,11 @@ if (records.size() < MIN_RECORDS) {
 <summary>📸 스크린샷</summary>
 
 **분석 결과**
+
 <img width="484" height="561" alt="수면유형완료" src="https://github.com/user-attachments/assets/0dda2820-d42e-4453-9928-7504c95d6aed" />
 
 **예외 처리 — 기록 부족**
+
 <img width="484" height="561" alt="수면유형예외처리" src="https://github.com/user-attachments/assets/afc51240-3df3-4717-8d7d-5fe6e9bbc1b7" />
 
 </details>
@@ -570,12 +574,15 @@ if (records.size() < MIN_RECORDS) {
 <summary>📸 스크린샷</summary>
 
 **기록 목록**
+
 <img width="483" height="560" alt="기록전체보기" src="https://github.com/user-attachments/assets/d38911e1-8e30-47c8-8510-6bd32145a495" />
 
 **체크박스 선택**
+
 <img width="483" height="560" alt="기록전체보기체크박스" src="https://github.com/user-attachments/assets/17505be2-51d4-4611-a015-9a51a52d549e" />
 
 **예외 처리 — 선택 없이 삭제**
+
 <img width="483" height="560" alt="기록전체보기예외처리" src="https://github.com/user-attachments/assets/f4e506c7-7cb8-4208-b81e-0f96bed4c95d" />
 
 </details>
@@ -595,12 +602,15 @@ if (records.size() < MIN_RECORDS) {
 <summary>📸 스크린샷</summary>
 
 **통계 화면**
+
 <img width="483" height="560" alt="수면통계요약" src="https://github.com/user-attachments/assets/9ac4a50c-0bca-4aac-9abf-cf5d6b685133" />
 
 **슬라이더 조절**
+
 <img width="484" height="561" alt="수면통계요약슬라이더" src="https://github.com/user-attachments/assets/b2e9c150-8880-43bf-b99e-792d82b0fec1" />
 
 **예외 처리 — 품질 경고**
+
 <img width="485" height="559" alt="수면통계요약예외처리" src="https://github.com/user-attachments/assets/e3389e0c-0a68-4d57-a013-d8b701752f59" />
 
 </details>
@@ -638,9 +648,11 @@ if (records.size() < MIN_RECORDS) {
 <summary>📸 스크린샷</summary>
 
 **목표 설정 화면**
+
 <img width="483" height="560" alt="목표수면화면" src="https://github.com/user-attachments/assets/2aa3bffd-28c0-42cc-ab96-268bca7c47f1" />
 
 **저장 성공**
+
 <img width="483" height="560" alt="목표수면화면성공" src="https://github.com/user-attachments/assets/a4f499bb-55c8-4cd5-ad24-9b52d1b5fc49" />
 
 </details>
