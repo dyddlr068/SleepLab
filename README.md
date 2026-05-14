@@ -223,7 +223,7 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 ## 🛠️ 12. SleepLab 트러블슈팅 전체 기록
 
 <details>
-<summary>:small_blue_diamond:1. 파일명 불일치로 데이터 복구 불가 문제</summary>
+<summary>:small_blue_diamond: 파일명 불일치로 데이터 복구 불가 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -242,7 +242,7 @@ private static final String FILE_PATH = "data/sleep_records.txt";
 </details>
 
 <details>
-<summary>2. GoalPanel 패키지 오류</summary>
+<summary>:small_blue_diamond: GoalPanel 패키지 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -262,7 +262,7 @@ com.sleeplab.ui
 </details>
 
 <details>
-<summary>3. GraphPanel 내부 클래스 충돌</summary>
+<summary>:small_blue_diamond: GraphPanel 내부 클래스 충돌</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -287,7 +287,7 @@ public class GraphPanel extends JPanel {
 </details>
 
 <details>
-<summary>4. 이모지 폰트 깨짐 문제</summary>
+<summary>:small_blue_diamond: 이모지 폰트 깨짐 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -305,7 +305,7 @@ btn.setFont(new Font("맑은 고딕", Font.PLAIN, 15));
 </details>
 
 <details>
-<summary>5. SwingUtilities cannot be resolved 오류</summary>
+<summary>:small_blue_diamond: SwingUtilities cannot be resolved 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -326,7 +326,7 @@ module SleepLab {
 </details>
 
 <details>
-<summary>6. StatPanel 에서 getSleeQuality() 오타 오류</summary>
+<summary>:small_blue_diamond: StatPanel 에서 getSleeQuality() 오타 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -344,7 +344,7 @@ r.getSleepQuality() // 정상
 </details>
 
 <details>
-<summary>7. 날짜 오류 메시지 불명확 문제</summary>
+<summary>:small_blue_diamond: 날짜 오류 메시지 불명확 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -363,7 +363,7 @@ showError("존재하지 않는 날짜입니다.\n2000-01-01 ~ "
 </details>
 
 <details>
-<summary>8. Refreshable 인터페이스 파일명 대소문자 오류</summary>
+<summary> Refreshable 인터페이스 파일명 대소문자 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -381,7 +381,7 @@ Refreshable.java  ← 정상
 </details>
 
 <details>
-<summary>9. 중복 날짜 입력 방지 미구현 문제</summary>
+<summary>:small_blue_diamond: 중복 날짜 입력 방지 미구현 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -405,7 +405,7 @@ if (manager.isDuplicate(date)) {
 </details>
 
 <details>
-<summary>10. if-else → Custom Exception 개선</summary>
+<summary>:small_blue_diamond: if-else → Custom Exception 개선</summary>
 
 | 항목 | 내용 |
 |------|------|
