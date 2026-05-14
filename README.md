@@ -220,10 +220,11 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 
 ---
 
-## 🛠️ 12. 트러블슈팅
+# 🛠️ SleepLab 트러블슈팅 전체 기록
 
-<details>
-<summary>🔹 파일명 불일치로 데이터 복구 불가 문제</summary>
+---
+
+## 1. 파일명 불일치로 데이터 복구 불가 문제
 
 | 항목 | 내용 |
 |------|------|
@@ -240,10 +241,9 @@ new FileReader("data/sleep_records.txt")  // 로딩 (오타)
 private static final String FILE_PATH = "data/sleep_records.txt";
 ```
 
-</details>
+---
 
-<details>
-<summary>🔹 GoalPanel 패키지 오류</summary>
+## 2. GoalPanel 패키지 오류
 
 | 항목 | 내용 |
 |------|------|
@@ -251,10 +251,19 @@ private static final String FILE_PATH = "data/sleep_records.txt";
 | **원인** | `GoalPanel.java` 파일이 `com.sleeplab.service` 패키지에 잘못 생성됨 |
 | **해결** | `com.sleeplab.ui` 패키지로 이동 후 정상 동작 확인 |
 
-</details>
+```
+// BEFORE
+com.sleeplab.service
+└── GoalPanel.java  ← 잘못된 위치
 
-<details>
-<summary>🔹 내부 클래스 충돌 문제</summary>
+// AFTER
+com.sleeplab.ui
+└── GoalPanel.java  ← 올바른 위치
+```
+
+---
+
+## 3. GraphPanel 내부 클래스 충돌
 
 | 항목 | 내용 |
 |------|------|
@@ -262,35 +271,178 @@ private static final String FILE_PATH = "data/sleep_records.txt";
 | **원인** | 내부 클래스로 선언하면 외부에서 타입을 인식하지 못하는 문제 발생 |
 | **해결** | `GraphPanel` 을 별도 파일로 분리하여 독립 클래스로 구성 |
 
-</details>
+```java
+// BEFORE — StatPanel 내부에 선언
+public class StatPanel extends JPanel {
+    class GraphPanel extends JPanel { // 내부 클래스 → 충돌 발생
+        ...
+    }
+}
+
+// AFTER — 별도 파일로 분리
+// GraphPanel.java
+public class GraphPanel extends JPanel {
+    ...
+}
+```
 
 ---
 
-## 📈 13. 개선 과정 BEFORE → AFTER
+## 4. 이모지 폰트 깨짐 문제
 
-<details>
-<summary>🔹 if-else → Custom Exception</summary>
+| 항목 | 내용 |
+|------|------|
+| **증상** | `Segoe UI Emoji` 폰트 적용 시 한글이 깨져서 표시됨 |
+| **원인** | `Segoe UI Emoji` 폰트가 한글을 지원하지 않음 |
+| **해결** | 한글은 `맑은 고딕` 폰트로 통일하고 이모지는 텍스트로 대체 |
 
 ```java
-// BEFORE — if-else로 오류 처리
+// BEFORE
+btn.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 15));
+
+// AFTER
+btn.setFont(new Font("맑은 고딕", Font.PLAIN, 15));
+```
+
+---
+
+## 5. SwingUtilities cannot be resolved 오류
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | `SwingUtilities cannot be resolved` 오류 발생 |
+| **원인** | `module-info.java` 에 `java.desktop` 모듈이 선언되지 않음 |
+| **해결** | `module-info.java` 에 `requires java.desktop` 추가 |
+
+```java
+// BEFORE
+module SleepLab {
+}
+
+// AFTER
+module SleepLab {
+    requires java.desktop;
+}
+```
+
+---
+
+## 6. StatPanel 에서 getSleeQuality() 오타 오류
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | `The method getSleeQuality() is undefined for the type SleepRecord` 오류 발생 |
+| **원인** | `getSleepQuality()` 를 `getSleeQuality()` 로 오타 입력 |
+| **해결** | `getSleepQuality()` 로 수정 |
+
+```java
+// BEFORE
+r.getSleeQuality()  // 오타
+
+// AFTER
+r.getSleepQuality() // 정상
+```
+
+---
+
+## 7. 날짜 오류 메시지 불명확 문제
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | 잘못된 날짜 입력 시 오류 메시지가 불명확하게 표시됨 |
+| **원인** | 단순히 "올바른 날짜 형식이 아닙니다" 만 표시하여 사용자가 어떤 날짜를 입력해야 하는지 모름 |
+| **해결** | 입력 가능한 날짜 범위를 명확하게 안내하도록 수정 |
+
+```java
+// BEFORE
+System.out.println("올바른 날짜 형식이 아닙니다.");
+
+// AFTER
+showError("존재하지 않는 날짜입니다.\n2000-01-01 ~ "
+    + LocalDate.now() + " 사이로 입력해주세요.");
+```
+
+---
+
+## 8. Refreshable 인터페이스 파일명 대소문자 오류
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | `Refreshable` 을 못 찾는 오류 발생 |
+| **원인** | 파일명이 `ReFreshable.java` 로 대문자 F가 들어가 있어서 인식 불가 |
+| **해결** | 파일명을 `Refreshable.java` 로 변경 |
+
+```
+// BEFORE
+ReFreshable.java  ← 대문자 F
+
+// AFTER
+Refreshable.java  ← 정상
+```
+
+---
+
+## 9. 중복 날짜 입력 방지 미구현 문제
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | 같은 날짜로 수면 기록을 두 번 입력하면 중복 저장됨 |
+| **원인** | 저장 전 중복 날짜 확인 로직이 없었음 |
+| **해결** | `isDuplicate()` 메서드 추가 후 저장 전 중복 체크 |
+
+```java
+// AFTER — SleepRecordManager.java
+public boolean isDuplicate(String date) {
+    return records.stream()
+        .anyMatch(r -> r.getDate().equals(date));
+}
+
+// InputPanel.java
+if (manager.isDuplicate(date)) {
+    showError(date + " 날짜의 기록이 이미 존재합니다.");
+    return;
+}
+```
+
+---
+
+## 10. if-else → Custom Exception 개선
+
+| 항목 | 내용 |
+|------|------|
+| **증상** | 기록 부족 시 `null` 반환으로 호출부에서 원인 파악 불가 |
+| **원인** | 예외 상황을 `null` 반환 또는 단순 출력으로 처리 |
+| **해결** | Custom Exception 으로 원인 명확히 전달 |
+
+```java
+// BEFORE
 if (records.size() < 3) {
     System.out.println("기록이 부족합니다.");
     return null;
 }
 
-// AFTER — Custom Exception으로 원인 명확히 전달
+// AFTER
 if (records.size() < MIN_RECORDS) {
     throw new InsufficientDataException(records.size(), MIN_RECORDS);
 }
 ```
 
-**개선 이유:** `null` 반환 방식은 호출부에서 왜 실패했는지 알 수 없습니다.
-`InsufficientDataException` 을 던지면 현재 기록 수와 필요 기록 수를 담아
-정확한 안내 메시지를 출력할 수 있습니다.
-
-</details>
-
 ---
+
+## 📋 트러블슈팅 요약
+
+| 번호 | 문제 | 원인 | 해결 |
+|------|------|------|------|
+| 1 | 파일명 불일치 | 오타 | 상수로 통일 |
+| 2 | GoalPanel 패키지 오류 | 잘못된 패키지 | ui 패키지로 이동 |
+| 3 | GraphPanel 내부 클래스 충돌 | 내부 클래스 선언 | 별도 파일로 분리 |
+| 4 | 이모지 폰트 깨짐 | 폰트 미지원 | 맑은 고딕으로 통일 |
+| 5 | SwingUtilities 오류 | module-info 누락 | requires java.desktop 추가 |
+| 6 | getSleeQuality 오타 | 오타 | getSleepQuality 로 수정 |
+| 7 | 날짜 오류 메시지 불명확 | 안내 부족 | 범위 명시 |
+| 8 | Refreshable 파일명 오류 | 대소문자 오류 | 파일명 수정 |
+| 9 | 중복 날짜 미체크 | 로직 누락 | isDuplicate 추가 |
+| 10 | null 반환 → Custom Exception | 설계 미흡 | Custom Exception 도입 |
 
 ## 📊 14. UML 클래스 다이어그램
 
