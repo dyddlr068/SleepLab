@@ -261,7 +261,8 @@ com.sleeplab.ui
 ```
 </details>
 
-## 3. GraphPanel 내부 클래스 충돌
+<details>
+<summary>3. GraphPanel 내부 클래스 충돌</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -283,10 +284,10 @@ public class GraphPanel extends JPanel {
     ...
 }
 ```
+</details>
 
----
-
-## 4. 이모지 폰트 깨짐 문제
+<details>
+<summary>4. 이모지 폰트 깨짐 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -301,10 +302,10 @@ btn.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 15));
 // AFTER
 btn.setFont(new Font("맑은 고딕", Font.PLAIN, 15));
 ```
+</details>
 
----
-
-## 5. SwingUtilities cannot be resolved 오류
+<details>
+<summary>5. SwingUtilities cannot be resolved 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -322,10 +323,10 @@ module SleepLab {
     requires java.desktop;
 }
 ```
+</details>
 
----
-
-## 6. StatPanel 에서 getSleeQuality() 오타 오류
+<details>
+<summary>6. StatPanel 에서 getSleeQuality() 오타 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -340,10 +341,10 @@ r.getSleeQuality()  // 오타
 // AFTER
 r.getSleepQuality() // 정상
 ```
+</details>
 
----
-
-## 7. 날짜 오류 메시지 불명확 문제
+<details>
+<summary>7. 날짜 오류 메시지 불명확 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -359,10 +360,10 @@ System.out.println("올바른 날짜 형식이 아닙니다.");
 showError("존재하지 않는 날짜입니다.\n2000-01-01 ~ "
     + LocalDate.now() + " 사이로 입력해주세요.");
 ```
+</details>
 
----
-
-## 8. Refreshable 인터페이스 파일명 대소문자 오류
+<details>
+<summary>8. Refreshable 인터페이스 파일명 대소문자 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -377,10 +378,10 @@ ReFreshable.java  ← 대문자 F
 // AFTER
 Refreshable.java  ← 정상
 ```
+</details>
 
----
-
-## 9. 중복 날짜 입력 방지 미구현 문제
+<details>
+<summary>9. 중복 날짜 입력 방지 미구현 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -401,10 +402,10 @@ if (manager.isDuplicate(date)) {
     return;
 }
 ```
+</details>
 
----
-
-## 10. if-else → Custom Exception 개선
+<details>
+<summary>10. if-else → Custom Exception 개선</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -424,23 +425,9 @@ if (records.size() < MIN_RECORDS) {
     throw new InsufficientDataException(records.size(), MIN_RECORDS);
 }
 ```
+</details>
 
 ---
-
-## 📋 트러블슈팅 요약
-
-| 번호 | 문제 | 원인 | 해결 |
-|------|------|------|------|
-| 1 | 파일명 불일치 | 오타 | 상수로 통일 |
-| 2 | GoalPanel 패키지 오류 | 잘못된 패키지 | ui 패키지로 이동 |
-| 3 | GraphPanel 내부 클래스 충돌 | 내부 클래스 선언 | 별도 파일로 분리 |
-| 4 | 이모지 폰트 깨짐 | 폰트 미지원 | 맑은 고딕으로 통일 |
-| 5 | SwingUtilities 오류 | module-info 누락 | requires java.desktop 추가 |
-| 6 | getSleeQuality 오타 | 오타 | getSleepQuality 로 수정 |
-| 7 | 날짜 오류 메시지 불명확 | 안내 부족 | 범위 명시 |
-| 8 | Refreshable 파일명 오류 | 대소문자 오류 | 파일명 수정 |
-| 9 | 중복 날짜 미체크 | 로직 누락 | isDuplicate 추가 |
-| 10 | null 반환 → Custom Exception | 설계 미흡 | Custom Exception 도입 |
 
 ## 📊 14. UML 클래스 다이어그램
 
