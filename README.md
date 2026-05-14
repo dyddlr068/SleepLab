@@ -220,11 +220,11 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 
 ---
 
-# 🛠️ SleepLab 트러블슈팅 전체 기록
+## 🛠️ 12. SleepLab 트러블슈팅 전체 기록
 
 ---
-
-## 1. 파일명 불일치로 데이터 복구 불가 문제
+<details>
+<summary>## 1. 파일명 불일치로 데이터 복구 불가 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -240,8 +240,7 @@ new FileReader("data/sleep_records.txt")  // 로딩 (오타)
 // AFTER
 private static final String FILE_PATH = "data/sleep_records.txt";
 ```
-
----
+</details>
 
 ## 2. GoalPanel 패키지 오류
 
