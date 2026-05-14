@@ -59,7 +59,7 @@ Java 기반 수면 루틴 처방 시스템입니다.
 
 | 카테고리 | 기술 |
 |----------|------|
-| Language | Java (JDK 17) |
+| Language | Java (JDK 21) |
 | GUI | Java Swing |
 | Paradigm | OOP (상속 · 인터페이스 · 다형성) |
 | Data Structure | ArrayList |
@@ -75,7 +75,7 @@ Java 기반 수면 루틴 처방 시스템입니다.
 - **에디터**: Eclipse
 - **버전 관리**: GitHub
 - **OS**: Windows
-- **JDK**: 17
+- **JDK**: 21
 
 ---
 
@@ -437,217 +437,56 @@ if (records.size() < MIN_RECORDS) {
 
 ## 👀 주요 기능 실행 화면
 
-### 🔐 로그인 · 회원가입
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**로그인 화면**
-
-<img width="483" height="560" alt="로그인메인" src="https://github.com/user-attachments/assets/654028f7-a314-4046-9459-7b7b85cdf2db" />
-
-**회원가입 화면**
-
-<img width="483" height="560" alt="회원가입" src="https://github.com/user-attachments/assets/a6648aff-311d-45a8-8925-15ba2f3fe5d9" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-**로그인 화면 (달 · 별 애니메이션)**
-![로그인화면](https://github.com/user-attachments/assets/245758a1-6bbf-4e41-92a8-380bf23ea6ef)
-
-**회원가입**
-![회원가입](https://github.com/user-attachments/assets/6314142c-b370-4ef2-88a4-400111170732)
-
-</details>
-
----
-
-### 🏠 메인 메뉴
-
-<details>
-<summary>📸 스크린샷</summary>
-
-<img width="484" height="561" alt="메인메뉴" src="https://github.com/user-attachments/assets/aea762cf-581e-4dbd-9c6c-13ef41b3513c" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![메인메뉴화면](https://github.com/user-attachments/assets/62f87045-1ae2-40e4-853f-5a7c197e03d2)
-
-</details>
-
----
-
-### 🌙 수면 기록 입력
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**입력 화면**
-
-<img width="484" height="561" alt="수면기록입력" src="https://github.com/user-attachments/assets/b013eaf8-e246-48ea-a686-f966621f97d2" />
-
-**저장 완료**
-
-<img width="484" height="561" alt="수면기록입력완료" src="https://github.com/user-attachments/assets/3986c134-8621-48ce-9a41-57b21cd043b1" />
-
-**예외 처리 — 잘못된 시간 입력**
-
-<img width="484" height="561" alt="수면기록입력예외처리" src="https://github.com/user-attachments/assets/17bfe50c-bf91-42ef-9888-a74a7d9f0637" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![수면기록입력](https://github.com/user-attachments/assets/b34dc555-d22a-4d5c-910e-8fde27ad24ce)
-
-</details>
-
----
-
-### 📊 수면 유형 분석
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**분석 결과**
-
-<img width="484" height="561" alt="수면유형완료" src="https://github.com/user-attachments/assets/0dda2820-d42e-4453-9928-7504c95d6aed" />
-
-**예외 처리 — 기록 부족**
-
-<img width="484" height="561" alt="수면유형예외처리" src="https://github.com/user-attachments/assets/afc51240-3df3-4717-8d7d-5fe6e9bbc1b7" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![수면유형분석](https://github.com/user-attachments/assets/80769a09-9f3d-45fd-ab74-6f61bd4161b4)
-
-</details>
-
----
-
-### 💊 루틴 처방
-
-<details>
-<summary>📸 스크린샷</summary>
-
-<img width="483" height="560" alt="루틴처방화면" src="https://github.com/user-attachments/assets/cb7d548d-4e52-47f3-9950-11e7f2a67fec" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![루틴처방화면](https://github.com/user-attachments/assets/b736074e-39e2-4c35-9207-0a39ee9a9125)
-
-</details>
-
----
-
-### 📋 기록 전체 보기
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**기록 목록**
-
-<img width="483" height="560" alt="기록전체보기" src="https://github.com/user-attachments/assets/d38911e1-8e30-47c8-8510-6bd32145a495" />
-
-**체크박스 선택**
-
-<img width="483" height="560" alt="기록전체보기체크박스" src="https://github.com/user-attachments/assets/17505be2-51d4-4611-a015-9a51a52d549e" />
-
-**예외 처리 — 선택 없이 삭제**
-
-<img width="483" height="560" alt="기록전체보기예외처리" src="https://github.com/user-attachments/assets/f4e506c7-7cb8-4208-b81e-0f96bed4c95d" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![기록전체보기수정삭제](https://github.com/user-attachments/assets/4dd03360-149a-4aba-b35c-cdd499780ca1)
-
-</details>
-
----
-
-### 📈 수면 통계 요약
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**통계 화면**
-
-<img width="483" height="560" alt="수면통계요약" src="https://github.com/user-attachments/assets/9ac4a50c-0bca-4aac-9abf-cf5d6b685133" />
-
-**슬라이더 조절**
-
-<img width="484" height="561" alt="수면통계요약슬라이더" src="https://github.com/user-attachments/assets/b2e9c150-8880-43bf-b99e-792d82b0fec1" />
-
-**예외 처리 — 품질 경고**
-
-<img width="485" height="559" alt="수면통계요약예외처리" src="https://github.com/user-attachments/assets/e3389e0c-0a68-4d57-a013-d8b701752f59" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![수면통계요약](https://github.com/user-attachments/assets/05ed3fd9-ef4b-47dc-8305-d7c72ba75524)
-
-</details>
-
----
-
-### 📅 월별 캘린더
-
-<details>
-<summary>📸 스크린샷</summary>
-
-<img width="484" height="561" alt="월별캘린더" src="https://github.com/user-attachments/assets/18fc489b-b494-456a-89bb-fbf7af75f535" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![월별캘린더화면](https://github.com/user-attachments/assets/a1878cc4-5263-4ae9-ab32-1f0aef94cfa4)
-
-</details>
-
----
-
-### ⚙️ 목표 수면 설정
-
-<details>
-<summary>📸 스크린샷</summary>
-
-**목표 설정 화면**
-
-<img width="483" height="560" alt="목표수면화면" src="https://github.com/user-attachments/assets/2aa3bffd-28c0-42cc-ab96-268bca7c47f1" />
-
-**저장 성공**
-
-<img width="483" height="560" alt="목표수면화면성공" src="https://github.com/user-attachments/assets/a4f499bb-55c8-4cd5-ad24-9b52d1b5fc49" />
-
-</details>
-
-<details>
-<summary>🎬 GIF</summary>
-
-![목표수면시간](https://github.com/user-attachments/assets/68b8f11a-dbbf-4ec5-bdd9-5f5ad3cc7c39)
-
-</details>
+<table>
+  <tr>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/245758a1-6bbf-4e41-92a8-380bf23ea6ef" />
+      <br/>로그인
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/6314142c-b370-4ef2-88a4-400111170732" />
+      <br/>회원가입
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/62f87045-1ae2-40e4-853f-5a7c197e03d2" />
+      <br/>메인 메뉴
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/b34dc555-d22a-4d5c-910e-8fde27ad24ce" />
+      <br/>수면 기록 입력
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/80769a09-9f3d-45fd-ab74-6f61bd4161b4" />
+      <br/>수면 유형 분석
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/b736074e-39e2-4c35-9207-0a39ee9a9125" />
+      <br/>루틴 처방
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/4dd03360-149a-4aba-b35c-cdd499780ca1" />
+      <br/>기록 전체 보기
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/05ed3fd9-ef4b-47dc-8305-d7c72ba75524" />
+      <br/>수면 통계 요약
+    </td>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/68b8f11a-dbbf-4ec5-bdd9-5f5ad3cc7c39" />
+      <br/>목표 수면 설정
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="250" src="https://github.com/user-attachments/assets/a1878cc4-5263-4ae9-ab32-1f0aef94cfa4" />
+      <br/>월별 캘린더
+    </td>
+  </tr>
+</table>
 
 ---
 
