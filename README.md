@@ -463,7 +463,7 @@ if (records.size() < MIN_RECORDS) {
 
 </details>
 
----
+
 
 ### 🏠 메인 메뉴
 
