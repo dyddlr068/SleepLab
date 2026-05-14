@@ -363,7 +363,7 @@ showError("존재하지 않는 날짜입니다.\n2000-01-01 ~ "
 </details>
 
 <details>
-<summary> Refreshable 인터페이스 파일명 대소문자 오류</summary>
+<summary>:small_blue_diamond: Refreshable 인터페이스 파일명 대소문자 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
