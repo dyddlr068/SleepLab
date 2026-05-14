@@ -220,9 +220,9 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 
 ---
 
-## 🛠️ SleepLab 트러블슈팅 전체 기록
+## 🛠️ SleepLab 트러블슈팅 전체 기록 (클릭하면 펼쳐집니다 👆)
 
-<details>
+<details open>
 <summary>파일명 불일치로 데이터 복구 불가 문제</summary>
 
 | 항목 | 내용 |
