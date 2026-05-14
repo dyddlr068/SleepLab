@@ -222,9 +222,8 @@ routine.prescribeNightRoutine(); // 유형마다 다른 루틴 출력
 
 ## 🛠️ 12. SleepLab 트러블슈팅 전체 기록
 
----
 <details>
-<summary>## 1. 파일명 불일치로 데이터 복구 불가 문제</summary>
+<summary>1. 파일명 불일치로 데이터 복구 불가 문제</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -242,7 +241,8 @@ private static final String FILE_PATH = "data/sleep_records.txt";
 ```
 </details>
 
-## 2. GoalPanel 패키지 오류
+<details>
+<summary>2. GoalPanel 패키지 오류</summary>
 
 | 항목 | 내용 |
 |------|------|
@@ -259,8 +259,7 @@ com.sleeplab.service
 com.sleeplab.ui
 └── GoalPanel.java  ← 올바른 위치
 ```
-
----
+</details>
 
 ## 3. GraphPanel 내부 클래스 충돌
 
